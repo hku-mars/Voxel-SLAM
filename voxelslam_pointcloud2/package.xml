@@ -1,0 +1,25 @@
+<package>
+  <name>voxelslam_pointcloud2</name>
+  <version>0.11.0</version>
+  <description>
+     Tutorials showing how to write plugins for RViz.
+  </description>
+  <maintainer email="zhengliu1323@hotmail.com">Zheng Liu</maintainer>
+  <license>BSD</license>
+
+  <author>Zheng Liu</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>qtbase5-dev</build_depend>
+  <build_depend>rviz</build_depend>
+
+  <run_depend>libqt5-core</run_depend>
+  <run_depend>libqt5-gui</run_depend>
+  <run_depend>libqt5-widgets</run_depend>
+  <run_depend>rviz</run_depend>
+
+  <export>
+      <rviz plugin="${prefix}/plugin_description.xml"/>
+  </export>
+</package>
