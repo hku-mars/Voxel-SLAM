@@ -11,7 +11,7 @@
 
 The video of **Voxel-SLAM** is available on [YouTube](https://youtu.be/Cg9W01aIUzE).
 
-### Related works:
+### Related works
 
 Related paper will be available on **arxiv** soon.
 
