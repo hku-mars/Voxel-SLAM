@@ -13,7 +13,7 @@ The video of **Voxel-SLAM** is available on [YouTube](https://youtu.be/Cg9W01aIU
 
 ### Related works
 
-Related paper is available on [**arxiv**](https://arxiv.org/abs/2410.08935) soon.
+Related paper is available on [**arxiv**](https://arxiv.org/abs/2410.08935).
 
 ### Competitions
 
