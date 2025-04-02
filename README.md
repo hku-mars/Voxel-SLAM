@@ -21,7 +21,7 @@ Voxel-SLAM has been served as a subsystem to participate in [ICRA HILTI 2023 SLA
 
 ### Codes
 
-1. Voxel-SLAM: The codes will be published once the paper is accepted.
+1. Voxel-SLAM: The codes will be published once the paper is accepted. 
 
 2. VoxelSLAMPointCloud2: A customized plugin for RViz. It has the same usage to original "PointCloud2" in RViz, but it can clear the point cloud map automatically when receiving an empty point cloud, with any **Decay Time** of the plugin. 
 
