@@ -1,0 +1,65 @@
+General:
+  lid_topic: "/livox/lidar"
+  imu_topic: "/livox/imu"
+  # The file path of the map to be saved
+  save_path: "/home/zale/save_datas/relc_avia/"
+  # The offline map in the save_path to be loaded
+  # '#' means the map is not loaded
+  previous_map: ""
+  bagname: "compus_elevator"
+  lidar_type: 0
+  blind: 0.5 # 0.5
+  point_filter_num: 3
+  extrinsic_tran: [0.04165, 0.02326, -0.0284]
+  extrinsic_rota: [1, 0, 0,
+                   0, 1, 0,
+                   0, 0, 1]
+  # The session is saved in save_path + bagname
+  is_save_map: 0
+
+Odometry:
+  cov_gyr: 0.1
+  cov_acc: 1
+  rdw_gyr: 0.0001
+  rdw_acc: 0.0001
+  # indoor:0.1, outdoor:0.25, high altitude: 0.5
+  down_size: 0.1
+  dept_err: 0.02
+  beam_err: 0.05
+  # indoor: 0.5-1, high speed: 2, high altitude: 4
+  voxel_size: 1
+  min_eigen_value: 0.0025
+  # The number of degenrate scans to make the system reset
+  degrade_bound: 10
+  point_notime: 0
+
+LocalBA:
+  win_size: 10
+  max_layer: 2
+  cov_gyr: 0.01
+  cov_acc: 1
+  rdw_gyr: 0.0001
+  rdw_acc: 0.0001
+  min_ba_point: 1
+  # The plane criterion
+  plane_eigen_value_thre: [4.0, 4.0, 4.0, 4.0]
+  imu_coef: 0.0001
+  thread_num: 5
+
+Loop:
+  jud_default: 0.5
+  icp_eigval: 10
+  ratio_drift: 0.01
+  curr_halt: 10
+  prev_halt: 10
+  acsize: 2
+  mgsize: 2
+  isHighFly: 0
+
+GBA:
+  # GBA use the coarse-to-fine strategy
+  # These are the coarse parameters
+  voxel_size: 2
+  min_eigen_value: 0.1
+  eigen_value_array: [4.0, 4.0, 4.0, 4.0]
+  total_max_iter: 6

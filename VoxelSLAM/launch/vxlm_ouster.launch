@@ -1,0 +1,13 @@
+<launch>
+	<arg name="rviz" default="true" />
+
+	<rosparam command="load" file="$(find voxel_slam)/config/ouster.yaml"/>
+	<param name="finish" value="false"/>
+	<node pkg="voxel_slam" type="voxelslam" name="voxelslam" output="screen" >
+	</node>     
+  
+	<group if="$(arg rviz)">
+		<node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find voxel_slam)/rviz_cfg/back.rviz" />
+	</group>
+     
+</launch>

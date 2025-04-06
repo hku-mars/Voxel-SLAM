@@ -1,0 +1,57 @@
+feature:
+  lid_topic: "/os1_cloud_node/points"
+  imu_topic: "/os1_cloud_node/imu"
+  save_path: "/media/zale/T7/newcollege/"
+  bagname: "long"
+  lidar_type: 2
+  blind: 1
+  point_filter_num: 3
+  extrinsic_tran: [0.0, 0.0, 0.0285]
+  extrinsic_rota: [-1, 0, 0,
+                    0,-1, 0,
+                    0, 0, 1]
+  is_save_map: 0
+
+EKF:
+  cov_gyr: 0.01 # 0.01
+  cov_acc: 1
+  rdw_gyr: 0.0001
+  rdw_acc: 0.0001
+  down_size: 0.4 # 0.2
+  # dept_err: 0.02
+  beam_err: 0.01
+  dept_err: 0.01
+  voxel_size: 2 # 0.5
+  min_eigen_value: 0.01 # 0.0025
+  degrade_bound: 100
+  point_notime: 0
+
+LocalBA:
+  win_size: 10
+  max_layer: 1 # 1
+  cov_gyr: 0.01 # 0.01
+  cov_acc: 1
+  rdw_gyr: 0.0001
+  rdw_acc: 0.0001
+  min_ba_point: 1
+  # eigen_value_array: [16.0, 16.0, 16.0, 16.0]
+  eigen_value_array: [4.0, 4.0, 4.0, 4.0]
+  imu_coef: 0.0002
+  thread_num: 5
+
+Loop:
+  jud_default: 0.5
+  icp_eigval: 9
+  ratio_drift: 0.01
+  curr_halt: 10
+  prev_halt: 10
+  acsize: 2
+  mgsize: 2
+  isHighFly: 0
+
+GBA:
+  voxel_size: 2
+  min_eigen_value: 0.01
+  eigen_value_array: [4.0, 4.0, 4.0, 4.0]
+  total_max_iter: 6
+

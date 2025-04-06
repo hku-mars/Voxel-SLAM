@@ -1,0 +1,55 @@
+General:
+  lid_topic: "/velodyne_points"
+  imu_topic: "/imu/data"
+  save_path: "/home/zale/save_datas/urbannav/"
+  previous_map: ""
+  bagname: "medium1"
+  lidar_type: 1
+  blind: 2.8
+  point_filter_num: 3
+  extrinsic_tran: [0.0, 0.0, 0.28] # urbannav 
+  extrinsic_rota: [1, 0, 0, 
+                   0, 1, 0, 
+                   0, 0, 1]
+  is_save_map: 0
+
+Odometry:
+  cov_gyr: 0.01 # 0.01
+  cov_acc: 1
+  rdw_gyr: 0.0001
+  rdw_acc: 0.0001
+  down_size: 0.25 # 0.1
+  beam_err: 0.01
+  dept_err: 0.01
+  voxel_size: 2 # 1
+  min_eigen_value: 0.01 # 0.0025
+  degrade_bound: 100
+  point_notime: 0
+
+LocalBA:
+  win_size: 10
+  max_layer: 2 # 1
+  cov_gyr: 0.01 # 0.01
+  cov_acc: 1
+  rdw_gyr: 0.0001
+  rdw_acc: 0.0001
+  min_ba_point: 1
+  plane_eigen_value_thre: [4.0, 4.0, 4.0, 4.0]
+  imu_coef: 0.0001
+  thread_num: 5
+
+Loop:
+  jud_default: 0.45
+  icp_eigval: 15
+  ratio_drift: 0.01
+  curr_halt: 10
+  prev_halt: 10
+  acsize: 2
+  mgsize: 2
+  isHighFly: 0
+
+GBA:
+  voxel_size: 2
+  min_eigen_value: 0.01
+  eigen_value_array: [9.0, 9.0, 9.0, 9.0]
+  total_max_iter: 3

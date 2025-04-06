@@ -1,0 +1,60 @@
+General:
+  lid_topic: "/livox/lidar"
+  imu_topic: "/livox/imu"
+  # bagname: "HKisland03"
+  # bagname: "HKairport03"
+  # bagname: "AMtown03"
+  bagname: "AMvalley03"
+  previous_map: ""
+  save_path: "/home/zale/save_datas/save_mars/"
+  lidar_type: 0
+  blind: 0.5 # 0.5
+  point_filter_num: 3
+  extrinsic_tran: [0.04165, 0.02326, -0.0284]
+  extrinsic_rota: [1, 0, 0,
+                   0, 1, 0,
+                   0, 0, 1]
+  is_save_map: 0
+
+Odometry:
+  cov_gyr: 0.01
+  cov_acc: 1
+  rdw_gyr: 0.0001
+  rdw_acc: 0.0001
+  down_size: 0.5
+  # down_size: 0.2
+  dept_err: 0.01
+  beam_err: 0.01
+  voxel_size: 4
+  # voxel_size: 1
+  min_eigen_value: 0.01
+  degrade_bound: 100
+  point_notime: 0
+
+LocalBA:
+  win_size: 10
+  max_layer: 2
+  cov_gyr: 0.01
+  cov_acc: 1
+  rdw_gyr: 0.0001
+  rdw_acc: 0.0001
+  min_ba_point: 1
+  plane_eigen_value_thre: [4.0, 4.0, 4.0, 4.0]
+  imu_coef: 0.0001
+  thread_num: 5
+
+Loop:
+  jud_default: 0.40
+  icp_eigval: 9
+  ratio_drift: 0.01
+  curr_halt: 10
+  prev_halt: 10
+  acsize: 2
+  mgsize: 2
+  isHighFly: 1
+
+GBA:
+  voxel_size: 15
+  min_eigen_value: 10
+  eigen_value_array: [2.0, 2.0, 2.0, 2.0]
+  total_max_iter: 10
