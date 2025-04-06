@@ -72,6 +72,7 @@ The rosbag had better be played from "site1_handheld_5" to "site_handheld_1", or
 Before launching, please set configure the variables in "hesai.yaml". The '#' means annotation
 
 ```
+# hesai.yaml
 save_path: "${YOUR_FILE_PATH_TO_SAVE_THE_OFFLINE_MAP}"
 previous_map: "# site1_handheld_5: 0.50, 
                # site1_handheld_4: 0.45,
@@ -99,6 +100,7 @@ rosbag play site1_handheld_3.bag --pause
 For the "site1_handheld_2", do not forget load the offline maps. The "hesai.yaml" should be like this
 
 ```
+# hesai.yaml
 save_path: "${YOUR_FILE_PATH_TO_SAVE_THE_OFFLINE_MAP}"
 previous_map: "site1_handheld_5: 0.50, 
                site1_handheld_4: 0.45,
