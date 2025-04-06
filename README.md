@@ -51,7 +51,7 @@ roslaunch roslaunch voxel_slam vxlm_avia.launch
 rosbag play compus_elevator.bag --pause 
 ```
 
-In the elevator, the system continues to restart until stepping out of the evevator.
+In the elevator, the system continues to restart until stepping out of the evevator. The blue point cloud is the map from initialization.
 
 After the rosbag is done, your may find the map is inconsistent as shown in the video. Run
 
