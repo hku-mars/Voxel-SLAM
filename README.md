@@ -147,7 +147,16 @@ rosparam set finish true
 
 This sequence is difficult to find loop. Please run the GBA to ensure the global map consistence.
 
-### 4.4 Others
+### 4.4 Livox Mid360
+
+The rosbag begin in a violent speed: [Onedrive](https://1drv.ms/f/c/8b1ef18ae4181c8d/ErtuXCFhFrBErZxzS5vLASkBJEfgDB9R2CSCgKe8BwhneQ?e=zbr7NL)
+
+```
+roslaunch voxel_slam vxlm_mid360.launch
+rosbag play jungle_challenge.bag --pause
+```
+
+### 4.5 Others
 
 Other types of LiDAR will be released later.
 
